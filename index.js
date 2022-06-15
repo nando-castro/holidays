@@ -32,7 +32,7 @@ app.get("/is-today-holiday", (req, res) => {
   dataHoje.getFullYear();
 
   for (let i = 0; i < holidays.length; i++) {
-    if (holidays[i].date === data) {
+    if (data.includes(holidays[i].date)) {
       day = true;
       feriado = holidays[i].name;
     }
